@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="">
-  <meta name="keywords" content="PhysConvex">
+  <meta name="keywords" content="Mint">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PhysConvex: Physics-Informed Dynamic Convex Fields for Reconstruction and Simulation</title>
+  <title>Multi-scale Interpretation Model for Convolutional Neural Networks: Building Trust based on Hierarchical Interpretation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,24 +88,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">PhysConvex: Physics-Informed Dynamic Convex Fields for Reconstruction and Simulation</h1>
+          <h1 class="title is-1 publication-title">Multi-scale Interpretation Model for Convolutional Neural Networks: Building Trust based on Hierarchical Interpretation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://danalaina.github.io/">Dan Wang</a><sup>1</sup>,</span>
+              <a href="https://xrcui.github.io/">Xinrui Cui </a><sup></sup>,</span>
             <span class="author-block">
-              <a href="https://xrcui.github.io/">Xinrui Cui</a><sup>2</sup>,</span>
+              <a href="https://danalaina.github.io/">Dan Wang</a><sup></sup>,</span>
             <span class="author-block">
-              <a href="https://serge.belongie.com/">Serge Belongie</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a><sup>2</sup>,
+              <a href="https://people.ece.ubc.ca/~zjanew/">Z. Jane Wang</a><sup></sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of California, San Diego</span>
-            <span class="author-block"><sup>2</sup>University of North Texas</span>
-            <span class="author-block"><sup>3</sup>University of Copenhagen</span>
+            <span class="author-block"><sup></sup>University of British Columbia</span>
           </div>
 
           <div class="column has-text-centered">
@@ -121,16 +116,27 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/html/2602.18886v1"
+                <a href="./static/paper/MINT.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>PDF</span>
                 </a>
               </span>
 
               <!-- Video Link. -->
+            </div>
+            <!-- Added image for model visualization -->
+            <div class="publication-image" style="margin-top: 1rem;">
+              <img src="./static/images/model0.jpg" alt="Model visualization" style="max-width:100%;height:auto;">
+            </div>
+            <!-- Description paragraph for MINT -->
+            <div class="publication-description" style="margin-top: 1rem; text-align: justify;">
+              <p>
+                The MINT model extracts class-discriminative, interpretable knowledge by leveraging both fine-scale and coarse-scale perturbations across shallow and deep network layers. By integrating perturbation-based and gradient-based mechanisms without requiring architectural changes or retraining, MINT generates multi-scale representations that explain deep-layer attention and shallow-layer features simultaneously. This novel approach utilizes a linear sparse optimization problem, governed by an inter-scale constraint regularization, to ensure coarse and fine-scale information cooperate effectively. Ultimately, MINT offers a more robust explanation of a network's hierarchical structure than methods relying solely on visual input, providing deeper insight into how CNNs process information.
+              </p>
+            </div>
               <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -253,7 +259,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Reconstructing and simulating dynamic scenes only from videos with both visual realism and physical consistency remains a fundamental challenge. Existing 3D representations, such as NeRFs and 3DGS, excel in appearance reconstruction but struggle to capture complex material deformation and dynamics. We propose PhysConvex, a Physics-informed Dynamic Convex Field that unifies visual reconstruction and physical simulation. PhysConvex represents deformable radiance fields using physically grounded 3D convex primitives governed by continuum mechanics. We introduce a boundary-driven dynamic convex representation that models deformation through vertex and surface dynamics, capturing spatially adaptive, non-uniform deformation, and evolving boundaries. To efficiently simulate complex geometries and heterogeneous materials, we further develop a reduced-order convex simulation that advects dynamic convex fields using neural skinning eigenmodes as shape- and material-aware deformation bases with time-varying reduced DOFs under Newtonian dynamics. Convex dynamics also offers compact, gap-free volumetric coverage, enhancing both geometric efficiency and simulation fidelity. Experiments demonstrate that PhysConvex achieves physically consistent dynamic reconstruction of geometry, appearance, and physical properties from videos, outperforming existing methods.
+            With the rapid development of deep learning models, their performances in various tasks are improved; while meanwhile their increasingly intricate architectures make them difficult to interpret. To tackle this challenge, model interpretability is essential and has been investigated in a wide range of applications. For end users, model interpretability can be used to build trust in the deployed machine learning models. For practitioners, interpretability plays a critical role in model explanation, model validation, and model improvement to develop a faithful model. In the paper, we propose a novel Multi-scale INTerpretation (MINT) model for convolutional neural networks using both the perturbation-based and the gradient-based interpretation approaches. It learns the class-discriminative interpretable knowledge from the multi-scale perturbation of feature information in different layers of deep networks. The proposed MINT model provides the coarse-scale and the fine-scale interpretations for the attention in the deep layer and specific features in the shallow layer, respectively.  Experimental results show that the MINT model presents the class-discriminative interpretation of the network decision and explains the significance of the hierarchical network structure.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -428,11 +434,16 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{wang2026physconvex,
-  title={PhysConvex: Physics-Informed 3D Dynamic Convex Radiance Fields for Reconstruction and Simulation},
-  author={Wang, Dan and Cui, Xinrui and Belongie, Serge and Ramamoorthi, Ravi},
-  journal={arXiv preprint arXiv:2602.18886},
-  year={2026}
+    <pre><code>@ARTICLE{8653995,
+  author={Cui, Xinrui and Wang, Dan and Wang, Z. Jane},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Multi-Scale Interpretation Model for Convolutional Neural Networks: Building Trust Based on Hierarchical Interpretation}, 
+  year={2019},
+  volume={21},
+  number={9},
+  pages={2263-2276},
+  keywords={Visualization;Computational modeling;Analytical models;Feature extraction;Perturbation methods;Image segmentation;Heating systems;Model interpretability;multi-scale interpretation;convolutional neural networks;model-agnostic},
+  doi={10.1109/TMM.2019.2902099}
 }</code></pre>
   </div>
 </section>
